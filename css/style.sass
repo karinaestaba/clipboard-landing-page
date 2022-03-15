@@ -1,0 +1,302 @@
+$font-primary: 'Bai Jamjuree', sans-serif
+
+$strong_cyan: hsl(171, 66%, 44%)
+$light_blue: hsl(233, 100%, 69%)
+$dark_grayish_blue: hsl(210, 10%, 33%)
+$grayish_blue: hsl(201, 11%, 66%)
+$light_color: hsl(0, 0%, 100%)
+
+*,
+*::after,
+*::before
+  margin: 0
+  padding: 0
+  box-sizing: border-box
+
+html
+  min-height: 100vh
+
+body
+  height: 100%
+  min-height: 100vh
+
+body
+  position: relative
+  display: grid
+  grid-template-areas: "c-main" "c-footer"
+  grig-template-rows: 1fr auto
+  justify-content: center
+  align-items: center
+  grid-template-rows: 1fr auto
+  grid-template-columns: 1fr
+
+body,
+input,
+select,
+button,
+p
+  font-family: $font-primary
+  color: $grayish_blue
+  font-weight: 400
+  font-size: 18px
+  line-height: 1.3
+
+h1,
+h2,
+h3
+  font-weight: 600
+  color: $dark_grayish_blue
+dl
+  text-align: left
+
+  dt
+    font-weight: 600
+    margin-bottom: 10px
+    font-size: 24px
+
+  dd
+    margin-bottom: 27px
+    white-space: pre-line
+    font-size: 16px
+    line-height: 26px
+
+a
+  text-decoration: none
+  color: $grayish_blue
+
+  &:hover
+    color: darken($grayish_blue, 10%)
+    transition: all 1s
+
+section
+  margin-top: 140px
+
+.title
+  font-size: 35px
+  margin-bottom: 20px
+
+p
+  &.description
+    white-space: pre-line
+    font-size: 18.2px
+    line-height: 28px
+
+.main
+  &-content
+    width: 100%
+    grid-area: c-main
+    text-align: center
+
+  &-logo
+    width: 125px
+    display: block
+    margin: 0 auto
+
+.container
+  max-width: 1220px
+  padding: 10px 30px
+  margin-left: auto
+  margin-right: auto
+
+.hero
+  display: flex
+  justify-content: center
+  flex-wrap: wrap
+  align-items: center
+  padding-top: 15vh
+  flex-direction: column
+  margin-top: 0
+  background-image: url("../img/bg-header-desktop.png")
+  background-repeat: no-repeat
+  background-size: cover
+  background-position: bottom center
+
+  &-title
+    font-size: 45px
+    line-height: 1
+    margin-top: 66px
+    margin-bottom: 25px
+
+  &-description
+    white-space: pre-line
+    font-size: 21px
+    line-height: 1.3
+
+.tracking
+  &-split-content
+    display: grid
+    grid-template-areas: "c-img c-text"
+    gap: 10px
+    grid-template-columns: 3fr 2.22fr
+    align-items: center
+
+  &-img
+    grid-area: c-img
+    width: 100%
+    margin-top: 82px
+    margin-left: -5vw
+
+  &-features
+    display: grid
+    grid-template-columns: 1fr
+    grid-template-rows: repeat(3, 1fr)
+    gap: 39px
+    text-align: left
+
+  &-item
+    padding-top: 22px
+
+    > h3 
+      font-size: 23px
+      line-height: 47px
+
+    > p 
+      font-size: 16px
+      line-height: 23px
+      white-space: pre-line
+      color: black
+
+.workflow
+  margin-top: 45px
+
+  &-features
+    display: grid
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr))
+    gap: 10px
+
+  .feature
+    &-item
+      padding-top: 71px
+
+      .title
+        font-size: 23px
+
+      .icon
+        display: inline-block
+        margin: 0 auto
+        margin-bottom: 44px
+
+        &-blacklist
+          margin-left: 18px
+          margin-top: 3px
+          margin-bottom: 36px
+
+        &-text
+          margin-left: 0
+          margin-top: 6px
+          margin-bottom: 39px
+
+        &-eye
+          margin-left: -19px
+          margin-top: 10px
+          margin-bottom: 35px
+
+    &-description
+      font-size: 16px
+      line-height: 28px
+      white-space: pre-line
+
+
+.access
+  &-img
+    margin-top: 100px
+
+.brands
+  display: flex
+  justify-content: space-between
+  flex-wrap: wrap
+  gap: 10px
+  margin-top: 140px
+  list-style: none
+  align-items: center
+  padding: 10px 53px
+
+.clipboard
+  margin-top: 134px
+
+.cta-container
+  display: flex
+  gap: 17px
+  justify-content: center
+  align-items: center
+  margin-top: 50px
+
+  .btn
+    border-radius: 26px
+    min-width: 226px
+    padding: 13px 19px
+    font-size: 19.5px
+    line-height: 27px
+    color: $light_color
+    border-bottom: 3px solid transparent
+    border-top: none
+    border-left-width: 1px
+    border-right-width: 1px
+
+    &.cta
+      &-primary
+        background-color: $strong_cyan
+        box-shadow: 2px 8px 40px lighten($strong_cyan, 35%)
+        border-color: hsl(166.7,53.1%,38.4%)
+      
+      &-secondary
+        background-color: $light_blue
+        box-shadow: 2px 8px 40px lighten($light_blue, 15%)
+        border-color: hsl(233.5,44.5%,55.5%)
+
+    &:hover
+      opacity: .6
+
+.main-footer
+  background-color:	hsl(220, 18%, 97%)
+  grid-area: c-footer
+  margin-top: 142px
+  padding: 30px
+  color: $dark_grayish_blue
+
+  a
+    color: $dark_grayish_blue
+
+    &:hover
+      color: $strong_cyan
+
+  > .container
+    display: grid
+    grid-template-areas: "c-logo c-list c-social" "foot foot foot"
+    gap: 10px
+    grid-template-columns: 1fr 2.5fr 2fr
+
+  .footer
+    &-link
+      &-group
+        display: grid
+        grid-template-columns: 1fr 1fr 1fr
+        gap: 46px
+      
+      &-item
+        list-style: none
+          
+        > li
+          margin-bottom: 17px
+
+    &-logo
+      display: block
+      margin-left: 26px
+
+  .social-link-group
+    list-style: none
+    display: flex
+    gap: 24px
+    justify-self: end
+    margin-top: 17px
+    justify-content: end
+    width: 100%
+    padding-right: 24px
+
+    a
+      &:hover
+        filter: invert(61%) sepia(79%) saturate(383%) hue-rotate(122deg) brightness(85%) contrast(93%)
+
+@media (min-width: 778px)
+  body
+
