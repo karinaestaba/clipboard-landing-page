@@ -22,13 +22,6 @@ body
 
 body
   position: relative
-  display: grid
-  grid-template-areas: "c-main" "c-footer"
-  grig-template-rows: 1fr auto
-  justify-content: center
-  align-items: center
-  grid-template-rows: 1fr auto
-  grid-template-columns: 1fr
 
 body,
 input,
@@ -46,19 +39,6 @@ h2,
 h3
   font-weight: 600
   color: $dark_grayish_blue
-dl
-  text-align: left
-
-  dt
-    font-weight: 600
-    margin-bottom: 10px
-    font-size: 24px
-
-  dd
-    margin-bottom: 27px
-    white-space: pre-line
-    font-size: 16px
-    line-height: 26px
 
 a
   text-decoration: none
@@ -69,22 +49,19 @@ a
     transition: all 1s
 
 section
-  margin-top: 140px
+  margin-top: 149px
 
 .title
-  font-size: 35px
-  margin-bottom: 20px
+  font-size: 29px
+  margin-bottom: 13px
 
 p
   &.description
-    white-space: pre-line
     font-size: 18.2px
     line-height: 28px
 
 .main
   &-content
-    width: 100%
-    grid-area: c-main
     text-align: center
 
   &-logo
@@ -99,52 +76,41 @@ p
   margin-right: auto
 
 .hero
-  display: flex
-  justify-content: center
-  flex-wrap: wrap
-  align-items: center
   padding-top: 15vh
-  flex-direction: column
   margin-top: 0
-  background-image: url("../img/bg-header-desktop.png")
+  background-image: url("../img/bg-header-mobile.png")
   background-repeat: no-repeat
   background-size: cover
   background-position: bottom center
 
+  > .container
+    display: flex
+    justify-content: center
+    flex-wrap: wrap
+    align-items: center
+    flex-direction: column
+
   &-title
-    font-size: 45px
-    line-height: 1
+    font-size: 32px
+    line-height: 41px
     margin-top: 66px
-    margin-bottom: 25px
+    margin-bottom: 10px
 
   &-description
-    white-space: pre-line
-    font-size: 21px
-    line-height: 1.3
+    font-size: 16px
+    line-height: 29px
 
 .tracking
-  &-split-content
-    display: grid
-    grid-template-areas: "c-img c-text"
-    gap: 10px
-    grid-template-columns: 3fr 2.22fr
-    align-items: center
+  padding-left: 30px
+  padding-right: 30px
 
   &-img
-    grid-area: c-img
-    width: 100%
     margin-top: 82px
-    margin-left: -5vw
-
-  &-features
-    display: grid
-    grid-template-columns: 1fr
-    grid-template-rows: repeat(3, 1fr)
-    gap: 39px
-    text-align: left
+    > img
+      width: 100%
 
   &-item
-    padding-top: 22px
+    padding-top: 44px
 
     > h3 
       font-size: 23px
@@ -153,20 +119,16 @@ p
     > p 
       font-size: 16px
       line-height: 23px
-      white-space: pre-line
-      color: black
+
+  &-split-content
+    margin-top: 25px
 
 .workflow
-  margin-top: 45px
-
-  &-features
-    display: grid
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr))
-    gap: 10px
+  margin-top: 63px
 
   .feature
     &-item
-      padding-top: 71px
+      padding-top: 55px
 
       .title
         font-size: 23px
@@ -177,53 +139,62 @@ p
         margin-bottom: 44px
 
         &-blacklist
-          margin-left: 18px
-          margin-top: 3px
-          margin-bottom: 36px
+          width: 45px
+          margin-left: 0
+          margin-top: 22px
 
         &-text
           margin-left: 0
-          margin-top: 6px
-          margin-bottom: 39px
+          margin-top: 0
+          margin-bottom: 34px
 
         &-eye
-          margin-left: -19px
-          margin-top: 10px
+          margin-top: 4px
           margin-bottom: 35px
 
     &-description
       font-size: 16px
       line-height: 28px
-      white-space: pre-line
-
 
 .access
+  padding-left: 12px
+  padding-right: 12px
+
+  .title
+    margin-top: 38px
+
   &-img
-    margin-top: 100px
+    margin-top: 55px
+
+    > img
+      width: 100%
 
 .brands
   display: flex
+  flex-direction: column
   justify-content: space-between
   flex-wrap: wrap
-  gap: 10px
+  gap: 45px
   margin-top: 140px
   list-style: none
   align-items: center
-  padding: 10px 53px
+  padding: 0 53px 10px
 
 .clipboard
   margin-top: 134px
 
 .cta-container
   display: flex
-  gap: 17px
+  gap: 23px
   justify-content: center
   align-items: center
-  margin-top: 50px
+  margin-top: 43px
+  flex-wrap: wrap
+  flex-direction: column
+  width: 100%
 
   .btn
     border-radius: 26px
-    min-width: 226px
     padding: 13px 19px
     font-size: 19.5px
     line-height: 27px
@@ -232,6 +203,7 @@ p
     border-top: none
     border-left-width: 1px
     border-right-width: 1px
+    width: 100%
 
     &.cta
       &-primary
@@ -249,10 +221,10 @@ p
 
 .main-footer
   background-color:	hsl(220, 18%, 97%)
-  grid-area: c-footer
   margin-top: 142px
-  padding: 30px
+  padding: 58px 30px
   color: $dark_grayish_blue
+  text-align: center
 
   a
     color: $dark_grayish_blue
@@ -260,43 +232,197 @@ p
     &:hover
       color: $strong_cyan
 
-  > .container
-    display: grid
-    grid-template-areas: "c-logo c-list c-social" "foot foot foot"
-    gap: 10px
-    grid-template-columns: 1fr 2.5fr 2fr
-
   .footer
     &-link
-      &-group
-        display: grid
-        grid-template-columns: 1fr 1fr 1fr
-        gap: 46px
-      
       &-item
         list-style: none
           
         > li
-          margin-bottom: 17px
+          margin-bottom: 28px
 
     &-logo
       display: block
-      margin-left: 26px
+      margin: 0 auto 40px
 
   .social-link-group
+    width: 100%
+    justify-self: end
     list-style: none
     display: flex
-    gap: 24px
-    justify-self: end
-    margin-top: 17px
-    justify-content: end
-    width: 100%
-    padding-right: 24px
+    gap: 40px
+    justify-content: center
+    align-items: center
+    margin-top: 49px
 
     a
       &:hover
         filter: invert(61%) sepia(79%) saturate(383%) hue-rotate(122deg) brightness(85%) contrast(93%)
 
-@media (min-width: 778px)
+@media (min-width: 998px)
   body
+    display: grid
+    grid-template-areas: "c-main" "c-footer"
+    grig-template-rows: 1fr auto
+    justify-content: center
+    align-items: center
+    grid-template-rows: 1fr auto
+    grid-template-columns: 1fr
+
+  p
+    &.description
+      white-space: pre-line
+
+  .title
+    font-size: 35px
+    margin-bottom: 20px
+
+  section
+    margin-top: 140px
+
+  .cta-container
+    flex-direction: row
+    margin-top: 50px
+    gap: 17px
+    width: auto
+
+    .btn
+      width: initial
+      min-width: 226px
+
+  .main
+    &-content
+      width: 100%
+      grid-area: c-main
+
+  .hero
+    background-image: url("../img/bg-header-desktop.png")
+
+    &-title
+      font-size: 45px
+      line-height: 1
+      margin-bottom: 25px
+
+    &-description
+      white-space: pre-line
+      font-size: 21px
+      line-height: 1.3
+
+  .workflow
+    margin-top: 45px
+
+    &-features
+      display: grid
+      gap: 10px
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr))
+    
+    .feature
+      &-item
+        padding-top: 71px
+        padding-left: 10px
+        padding-right: 10px
+
+        .title
+          line-height: 26px
+
+        .icon
+          &-blacklist
+            margin-left: 18px
+            margin-top: 3px
+            margin-bottom: 36px
+
+          &-text
+            margin-top: 6px
+            margin-bottom: 39px
+
+          &-eye
+            margin-left: -19px
+            margin-top: 10px
+
+    &-description
+      white-space: pre-line
+
+  .tracking
+    padding-left: inherit
+    padding-right: inherit
+
+    &-split-content
+      display: grid
+      grid-template-areas: "c-img c-text"
+      grid-template-columns: 3fr 2.22fr
+      gap: 10px
+      margin-top: 0
+      align-items: center
+
+    &-img
+      grid-area: c-img
+      width: 100%
+      margin-top: 82px
+      margin-left: -5vw
+
+      > img
+        width: auto
+
+    &-features
+      display: grid
+      grid-template-columns: 1fr
+      grid-template-rows: repeat(3, 1fr)
+      gap: 39px
+      text-align: left
+
+    &-item
+      padding-top: 22px
+
+      > p 
+        white-space: pre-line
+
+  .brands
+    flex-direction: row
+    gap: 10px
+    padding: 7px 53px 12px
+
+  .access
+    padding-left: 0
+    padding-right: 0
+
+    .title
+      margin-top: 0
+
+    &-img
+      margin-top: 100px
+
+      > img
+        width: auto
+
+  .main-footer
+    grid-area: c-footer
+    text-align: left
+    padding: 30px
+
+    > .container
+      display: grid
+      grid-template-areas: "c-logo c-list c-social" "foot foot foot"
+      grid-template-columns: 1fr 2.5fr 2fr
+      gap: 10px
+
+    .footer
+      &-link
+        &-group
+          display: grid
+          grid-template-columns: 1fr 1fr 1fr 
+          gap: 46px
+
+        &-item
+          > li
+            margin-bottom: 17px
+
+      &-logo
+        margin: 0 0 0 26px
+
+    .social-link-group
+      gap: 24px
+      padding-right: 21px
+      justify-content: end
+      margin-top: 16px
+      align-items: center
+      align-self: start
 
