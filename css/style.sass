@@ -57,7 +57,7 @@ section
 
 p
   &.description
-    font-size: 18.2px
+    font-size: 16px
     line-height: 28px
 
 .main
@@ -121,7 +121,7 @@ p
       line-height: 23px
 
   &-split-content
-    margin-top: 25px
+    margin-top: 64px
 
 .workflow
   margin-top: 63px
@@ -258,6 +258,45 @@ p
       &:hover
         filter: invert(61%) sepia(79%) saturate(383%) hue-rotate(122deg) brightness(85%) contrast(93%)
 
+@media (min-width: 768px)
+  p
+    &.description
+      font-size: 18px
+      padding-left: 40px
+      padding-right: 40px
+
+  .cta-container
+    flex-direction: row
+    margin-top: 50px
+    gap: 17px
+    width: auto
+
+    .btn
+      width: initial
+      min-width: 226px
+
+  .tracking
+    padding-left: inherit
+    padding-right: inherit
+
+    &-split-content
+      display: grid
+      grid-template-areas: "c-img c-text"
+      grid-template-columns: 1fr 1fr
+      gap: 10px
+      margin-top: 0
+      align-items: center
+
+    &-img
+      grid-area: c-img
+      margin-top: 40px
+      margin-left: -96px
+      text-align: right
+
+    &-features
+      text-align: left
+      padding: 0 35px
+
 @media (min-width: 998px)
   body
     display: grid
@@ -278,16 +317,6 @@ p
 
   section
     margin-top: 140px
-
-  .cta-container
-    flex-direction: row
-    margin-top: 50px
-    gap: 17px
-    width: auto
-
-    .btn
-      width: initial
-      min-width: 226px
 
   .main
     &-content
@@ -342,32 +371,23 @@ p
       white-space: pre-line
 
   .tracking
-    padding-left: inherit
-    padding-right: inherit
-
     &-split-content
-      display: grid
-      grid-template-areas: "c-img c-text"
       grid-template-columns: 3fr 2.22fr
-      gap: 10px
-      margin-top: 0
-      align-items: center
 
     &-img
-      grid-area: c-img
-      width: 100%
       margin-top: 82px
-      margin-left: -5vw
+      width: 100%
 
       > img
         width: auto
-
+      
     &-features
       display: grid
       grid-template-columns: 1fr
       grid-template-rows: repeat(3, 1fr)
       gap: 39px
       text-align: left
+      padding: 0
 
     &-item
       padding-top: 22px
