@@ -31,6 +31,8 @@ This is a solution to the [Clipboard landing page challenge on Frontend Mentor](
 - CSS custom properties
 - Flexbox, CSS GRID
 - Sass
+- Vanilla javascript.
+- Intersection observer
 
 ## Author
 
