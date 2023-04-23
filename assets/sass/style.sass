@@ -78,7 +78,7 @@ p
 .hero
   padding-top: 15vh
   margin-top: 0
-  background-image: url("../img/bg-header-mobile.png")
+  background-image: url("../images/bg-header-mobile.png")
   background-repeat: no-repeat
   background-size: cover
   background-position: bottom center
@@ -274,6 +274,18 @@ p
       &:hover
         filter: invert(61%) sepia(79%) saturate(383%) hue-rotate(122deg) brightness(85%) contrast(93%)
 
+.credits
+  font-size: 13px
+  text-align: center
+
+  a
+    color: $dark_grayish_blue
+    transition: all .5s ease
+    white-space: nowrap
+
+    &:hover
+      color: darken($dark_grayish_blue, 30)
+
 @media (min-width: 768px)
   p
     &.description
@@ -340,7 +352,7 @@ p
       grid-area: c-main
 
   .hero
-    background-image: url("../img/bg-header-desktop.png")
+    background-image: url("../images/bg-header-desktop.png")
 
     &-title
       font-size: 45px
